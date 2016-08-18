@@ -9,12 +9,24 @@
     <body>
     <form method="get" action="{% url 'buscar' %}">
             <label >Término a buscar</label><input type="text" name="criterio" >
-            <input type="submit" name="buscar" value="buscar"> 
+            <input type="submit" name="buscar" value="buscar">
+
+
+
+            <select name="Filtro1">
+                <option value="">Double Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="strawberry" selected>Strawberry</option>
+                <option value="caramel">Caramel</option>
+            </select>
+
+
     </form>
     <table border="1">
         <thead>
             <tr>
                 <th>Artista</th>
+                <th>Entidad</th>
                 <th>Album</th>
                 <th>Canción</th>
             </tr>
@@ -27,6 +39,7 @@
             {% for row in data %}
             <tr>
                 <td> {{ row.artistName }} </td>
+                <td> {{ row.entity}} </td>
                 <td>{{ row.collectionName }} </td>
                 <td>{{ row.trackName }} </td>
             </tr>
