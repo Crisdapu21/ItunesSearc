@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <form method="get" action="{% url 'buscar' %}">
+            <label >Término a buscar</label><input type="text" name="criterio" >
+            <input type="submit" name="buscar" value="buscar"> 
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Artista</th>
+                <th>Album</th>
+                <th>Canción</th>
+            </tr>
+        
+        </thead>
+        <tbody>
+            {% if criterio %}
+                Resultados encontrados por {{ criterio }}
+            {% endif %}
+            {% for row in data %}
+            <tr>
+                <td> {{ row.artistName }} </td>
+                <td>{{ row.collectionName }} </td>
+                <td>{{ row.trackName }} </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td  colspan="3" > No se han encontrado resultados</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+           
+    </table>
+    
+    
+    </body>
+</html>
