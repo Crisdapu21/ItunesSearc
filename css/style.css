@@ -1,0 +1,29 @@
+body {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  background-color:#2ECCFA;
+
+  }
+td {
+
+    border: black 3px solid;
+
+}
+
+
+tbody  {
+
+    border: black 3px solid;
+    background-color: greenyellow
+
+}
+tr{
+
+    border: black 3px solid;
+
+}
+td {
+
+    border:  3px solid;
+
+}

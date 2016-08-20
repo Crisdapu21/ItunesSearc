@@ -4,23 +4,24 @@
         <title>ItunesSearch</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
-    <form method="get" action="{% url 'buscar' %}">
-            <label >Término a buscar</label><input type="text" name="criterio" >
-            <input type="submit" name="buscar" value="buscar">
+    <body >
+
+    <form method="get"  <h1 align="center"> </h1> action="{% url 'buscar' %}">
+            <label ><h1 align="center"> Término a buscar </h1> </label><input align="left" type="text" name="criterio" >
+            <input type="submit" align="center" name="buscar" value="Buscar">
 
             <select name="Filtro1">
-                <option value=>All</option>
-                <option value=musicTrack>Music</option>
+                <option value=>All</aloption>
+                <option value=musicTrack><h1 align="center">Music</h1></option>
                 <option value=movie>Video</option>
                 <option value=software>Software</option>
             </select>
 
 
     </form>
-    <table border="1">
+    <table border="1" align="center">
         <thead>
             <tr>
                 <th>Artista</th>
