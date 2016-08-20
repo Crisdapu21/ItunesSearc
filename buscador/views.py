@@ -26,6 +26,7 @@ def buscar(request):
 
 
 
+
             dict = {'data': data["results"], 'criterio': criterio}
 
 
